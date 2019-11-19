@@ -35,9 +35,4 @@ class ServiceProviderTest extends AbstractTestCase
     {
         $this->assertIsInjectable(TwitterExtension::class);
     }
-
-    public function testEnvironmentIsSetup()
-    {
-        $this->assertTrue(in_array($this->app->make(TwitterParser::class), $this->app->make('markdown.environment')->getInlineParsers(), true));
-    }
 }

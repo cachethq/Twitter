@@ -13,14 +13,15 @@ declare(strict_types=1);
 
 namespace CachetHQ\Twitter;
 
-use League\CommonMark\Extension\Extension;
+use League\CommonMark\ConfigurableEnvironmentInterface;
+use League\CommonMark\Extension\ExtensionInterface;
 
 /**
  * This is the twitter extension class.
  *
  * @author James Brooks <james@alt-three.com>
  */
-class TwitterExtension extends Extension
+class TwitterExtension implements ExtensionInterface
 {
     /**
      * The twitter parser.
@@ -42,12 +43,12 @@ class TwitterExtension extends Extension
     }
 
     /**
-     * Returns a list of inline parsers to add to the existing list.
+     * Register extensions.
      *
-     * @return \League\CommonMark\Inline\Parser\InlineParserInterface[]
+     * @return void
      */
-    public function getInlineParsers()
+    public function register(ConfigurableEnvironmentInterface $environment)
     {
-        return [$this->parser];
+        $environment->addInlineParser($this->parser);
     }
 }

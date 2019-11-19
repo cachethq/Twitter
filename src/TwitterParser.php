@@ -13,23 +13,23 @@ declare(strict_types=1);
 
 namespace CachetHQ\Twitter;
 
-use League\CommonMark\Inline\Element\Link;
-use League\CommonMark\Inline\Parser\AbstractInlineParser;
 use League\CommonMark\InlineParserContext;
+use League\CommonMark\Inline\Element\Link;
+use League\CommonMark\Inline\Parser\InlineParserInterface;
 
 /**
  * This is the twitter parser class.
  *
  * @author James Brooks <james@alt-three.com>
  */
-class TwitterParser extends AbstractInlineParser
+class TwitterParser implements InlineParserInterface
 {
     /**
      * Get the characters that must be matched.
      *
      * @return string[]
      */
-    public function getCharacters()
+    public function getCharacters(): array
     {
         return ['@'];
     }
@@ -43,7 +43,7 @@ class TwitterParser extends AbstractInlineParser
      *
      * @return bool
      */
-    public function parse(InlineParserContext $inlineContext)
+    public function parse(InlineParserContext $inlineContext): bool
     {
         $cursor = $inlineContext->getCursor();
 
