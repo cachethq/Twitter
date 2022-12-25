@@ -1,6 +1,6 @@
 {
-    "name": "cachethq/twitter",
-    "description": "A Twitter handle parser for Laravel 5 and 6 and 7",
+    "name": "steffjenl/twitter",
+    "description": "A Twitter handle parser for Laravel 7",
     "keywords": ["twitter", "parser", "markdown", "Cachet", "CachetHQ"],
     "license": "MIT",
     "authors": [
