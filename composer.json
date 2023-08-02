@@ -1,25 +1,29 @@
 {
     "name": "steffjenl/twitter",
-    "description": "A Twitter handle parser for Laravel 7",
+    "description": "A Twitter handle parser for Laravel 10",
     "keywords": ["twitter", "parser", "markdown", "Cachet", "CachetHQ"],
     "license": "MIT",
     "authors": [
         {
             "name": "Cachet",
             "email": "support@cachethq.io"
+        },
+        {
+            "name": "MonkeySoft",
+            "email": "hallo@monkeysoft.nl"
         }
     ],
     "require": {
-        "php": "^8.0",
-        "illuminate/contracts": "^7.0|^8.0|^9.0",
-        "illuminate/support": "^7.0|^8.0|^9.0",
+        "php": "^8.0 || ^8.1",
+        "illuminate/contracts": "^5.5 || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0",
+        "illuminate/support": "^5.5 || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0",
         "league/commonmark": "^1.0"
     },
     "require-dev": {
         "graham-campbell/analyzer": "^3.1",
         "graham-campbell/markdown": "^13.1",
         "graham-campbell/testbench": "^5.1",
-        "phpunit/phpunit": "^9.0"
+        "phpunit/phpunit": "^9.0 || ^10.0"
     },
     "autoload": {
         "psr-4": {
